@@ -1,0 +1,11 @@
+{
+  "players": [
+    { "id": "1", "name": "Mark", "level": 12},
+    { "id": "2", "name": "Jez", "level": 34},
+    { "id": "3", "name": "Roy", "level": 3},
+    { "id": "4", "name": "Moss", "level": 4},
+    { "id": "5", "name": "Jen", "level": 66},
+    { "id": "6", "name": "Douglas", "level": 10},
+    { "id": "7", "name": "Rudy", "level": 11 }
+  ]
+}
