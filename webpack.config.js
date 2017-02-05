@@ -3,7 +3,7 @@ var path = require('path')
 module.exports = {
   entry: {
     app: [
-      './src/index.js'
+      './src/static/index.js'
     ]
   },
 
@@ -46,6 +46,7 @@ module.exports = {
 
   devServer: {
     inline: true,
+    contentBase: './src',
     stats: {
       colors: true,
       chunks: false
