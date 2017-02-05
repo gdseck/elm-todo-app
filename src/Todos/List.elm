@@ -17,7 +17,7 @@ view todos =
 nav : List Todo -> Html Msg
 nav todos =
     div [ class "" ]
-        [ div [ class "" ] [ text "Players" ] ]
+        [ div [ class "" ] [ text "Todos" ] ]
 
 
 list : List Todo -> Html Msg
