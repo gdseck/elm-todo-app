@@ -8,7 +8,7 @@ import Todos.Models exposing (Todo)
 
 view : List Todo -> Html Msg
 view todos =
-    div []
+    div [ class "container" ]
         [ nav todos
         , list todos
         ]
@@ -16,30 +16,23 @@ view todos =
 
 nav : List Todo -> Html Msg
 nav todos =
-    div [ class "" ]
-        [ div [ class "" ] [ text "Todos" ] ]
+    div [ class "title" ]
+        [ div [ class "todo-container" ] [ text "Elm Todo App" ] ]
 
 
 list : List Todo -> Html Msg
 list todos =
-    div []
-        [ table []
-            [ thead []
-                [ tr []
-                    [ td [] [ text "Id" ]
-                    , td [] [ text "Todo" ]
-                    , td [] [ text "Status" ]
-                    ]
-                ]
-            , tbody [] (List.map todoRow todos)
-            ]
+    div [ class "todo-list-wrapper" ]
+        [ ul [ class "todo-list" ]
+            (List.map
+                todoItem
+                todos
+            )
         ]
 
 
-todoRow : Todo -> Html Msg
-todoRow todo =
-    tr []
-        [ td [] [ text todo.id ]
-        , td [] [ text todo.content ]
-        , td [] [ text (toString todo.status) ]
+todoItem : Todo -> Html Msg
+todoItem todo =
+    li [ class "todo-item" ]
+        [ text todo.content
         ]
